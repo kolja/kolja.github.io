@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <script src="https://cdn.jsdelivr.net/npm/three@0.152.2/build/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/scittle@0.6.15/dist/scittle.js"></script>
+    <script type="application/x-scittle">
+      (ns example
+        (:require [cljsjs.three :as THREE]))
+
+      (let [scene (THREE/Scene.)
+            camera (THREE/PerspectiveCamera. 75 (/ (.innerWidth js/window) (.innerHeight js/window)) 0.1 1000)
+            renderer (THREE/WebGLRenderer.)
+            geometry (THREE/BoxGeometry. 1 1 1)
+            material (THREE/MeshBasicMaterial. (clj->js {:color 0x00ff00}))
+            cube (THREE/Mesh. geometry material)]
+        (.setSize renderer (.innerWidth js/window) (.innerHeight js/window))
+        (.appendChild js/document.body (.domElement renderer))
+        (.add scene cube)
+        (set! (.-z (.-position camera)) 5)
+        (defn animate []
+          (set! (.-x (.-rotation cube)) (+ (.-x (.-rotation cube)) 0.01))
+          (set! (.-y (.-rotation cube)) (+ (.-y (.-rotation cube)) 0.02))
+          (.render renderer scene camera)
+          (.requestAnimationFrame js/window animate))
+        (animate))
+    </script>
+  </head>
+  <body>
+      <section class="section">
+        <div class="container">
+          {% block content %} {% endblock %}
+        </div>
+      </section>
+  </body>
+</html>
