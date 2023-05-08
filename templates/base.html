@@ -3,16 +3,26 @@
     <head>
         <meta charset="utf-8">
         <link rel="stylesheet" href="site.css">
-        <script src="https://cdn.jsdelivr.net/npm/three@0.152.2/build/three.min.js"></script>
     </head>
     <body>
+        <canvas id="canvas"></canvas>
         <header>
             <img src="img/robots.png">
         </header>
+        <nav>
+            <a href="/">home</a>
+            <a href="contact">contact</a>
+        </nav>
         <section class="section">
-            <div class="container">
-                {% block content %} {% endblock %}
-            </div>
+            {% block content %}
+                {{ page.content | safe }}
+            {% endblock %}
         </section>
+        <script type="importmap">{
+            "imports": {
+                "three": "https://unpkg.com/three@0.152.2/build/three.module.min.js"
+            }
+        }</script>
+        <script src="main.js" type="module"></script>
     </body>
 </html>

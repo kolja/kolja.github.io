@@ -1,3 +1,4 @@
+$petrol: #5992A5
 @font-face
   font-family: 'Fotaru'
   src: url('fonts/fotaru.woff') format('woff')
@@ -18,14 +19,33 @@ header
   img
     height: 200px
 
+nav
+  display: flex
+  justify-content: flex-start
+  align-items: center
+  font-family: 'Fotaru', sans-serif
+  position: absolute
+  top: 170px
+  left: 3em
+  a:last-child
+    margin-right: 0
+  a
+    color: #FFF8B2
+    margin-right: 20px
+  a:hover
+    color: white
+
 section
   margin: 2em 3em
+
+#canvas
+  position: absolute
 
 h1, h2
   font-family: 'Fotaru', sans-serif
   text-transform: uppercase
   letter-spacing: 1pt
-  color: #5992A5
+  color: $petrol
 
 h1
   font-size: 14pt
@@ -36,3 +56,36 @@ a
 
 a:hover
   color: #F89306
+
+// ----- email form -----
+form
+  display: flex
+  flex-direction: column
+  width: 100%
+  max-width: 400px
+
+input, textarea, button
+  font-family: 'Courier'
+  box-sizing: border-box
+  width: 100%
+  padding: 10px
+  margin: 3px 0px
+  border: 2px solid #ddd
+  border-radius: 5px
+  font-size: 16px
+  outline: none
+  transition: border-color 0.5s
+
+input:focus, textarea:focus
+  border-color: $petrol
+
+button
+  font-family: 'Futoru' !important
+  color: $petrol
+
+textarea
+  resize: vertical
+  min-height: 120px
+
+button:hover
+  border: 2px solid $petrol
