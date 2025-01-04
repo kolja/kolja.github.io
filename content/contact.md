@@ -6,6 +6,7 @@ template = "base.html"
 
 # contact & social media
 Twitter: [01k](https://twitter.com/01k)\
+Mastodon: [@kolja@toot.berlin](https://toot.berlin/@kolja) <a href="https://toot.berlin/@kolja" rel="me"></a> \
 GitHub: [github.com/kolja](https://github.com/kolja)\
 Stackoverflow: [kolja](https://stackoverflow.com/users/731041/kolja)\
 Phone: +49 (0) 175 59 59 161
