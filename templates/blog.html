@@ -1,13 +1,23 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1 class="title">
-  {{ section.title }}
-</h1>
-<ul>
-  <!-- If you are using pagination, section.pages will be empty. You need to use the paginator object -->  
-  {% for page in section.pages %}
-  <li><a href="{{ page.permalink | safe }}">{{ page.title }}</a></li>
-  {% endfor %}
-</ul>
+{% set section = get_section(path="blog/_index.md") %}
+<div class="container">
+    <aside class="sidebar">
+        <ul>
+            {% for page in section.pages %}
+                <li>
+                  <a href="{{ page.permalink }}"
+                     class="{% if current_path == page.path %}active{% endif %}">
+                    {{ page.title }}
+                  </a>
+                </li>
+            {% endfor %}
+        </ul>
+    </aside>
+    <div class="content">
+      {% block doc_content %}
+      {% endblock doc_content %}
+    </div>
+</div>
 {% endblock content %}

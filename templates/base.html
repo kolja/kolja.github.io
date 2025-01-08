@@ -15,13 +15,12 @@
         </header>
         <nav>
             <a href="/">home</a>
-            <a href="contact">contact</a>
-            <a href="gallery">gallery</a>
+            <a href="/contact">contact</a>
+            <a href="/gallery">gallery</a>
+            <a href="/blog">blog</a>
         </nav>
         <section class="section">
-            {% block content %}
-                {{ page.content | safe }}
-            {% endblock %}
+            {% block content %} {% endblock %}
         </section>
         <script type="importmap">{
             "imports": {

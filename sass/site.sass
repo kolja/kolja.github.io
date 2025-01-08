@@ -1,3 +1,5 @@
+
+
 $petrol: #5992A5
 @font-face
   font-family: 'Fotaru'
@@ -58,6 +60,7 @@ a:hover
   color: #F89306
 
 // ----- email form -----
+
 form
   display: flex
   flex-direction: column
@@ -89,3 +92,31 @@ textarea
 
 button:hover
   border: 2px solid $petrol
+
+// ----- blog -----
+
+.container
+    display: flex
+    max-width: 1200px
+    margin: 0 auto
+
+.sidebar
+    width: 20%
+    padding: 1em
+    // background: #f0f0f0;
+    ul
+      list-style: none
+      padding: 0
+
+    a
+      display: block
+      padding: 0.5em 0
+      text-decoration: none
+      color: $petrol
+
+      &.active
+          font-weight: bold
+
+.content
+    width: 80%
+    padding: 1em

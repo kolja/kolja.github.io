@@ -1,7 +1,7 @@
 +++
 title = "contact"
 slug = "contact"
-template = "base.html"
+date = 2025-01-01
 +++
 
 # contact & social media
