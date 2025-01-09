@@ -5,13 +5,15 @@ date = 2024-12-28
 
 {{ image(src="blog/orca.logo.png", alt="an orca whale reading a red book", width="20%") }}
 
-I decided to move my entire Library to the "cloud" (my Synology NAS) and I like to use
-Calibre to keep track of all the books I own.
+Recently, I decided to move my entire Library to the "cloud" (the Synology NAS in my Livingroom).
+I am using [Calibre](https://calibre-ebook.com/) to keep track of all the books I own.
 
-I also like to use Yomu as a reader on my iPad. When I decide to read a new book,
-I can download it via the OPDS format.
+When I decide to read a book, I'll open [Yomu](https://www.yomu-reader.com/) on my iPad, which can add books from an OPDS feed.
 
-But how do you serve your Calibre Library as OPDS feed, such that one can access it anywhere?
-I'm glad you asked: ORCA is here to help!
+But how do you serve your Calibre Library as OPDS feed, that one can access it anywhere?
+I felt that there was no simple, straight-forward solution out there, so I decided to write my own.
+
+ORCA (OPDS Rust CAlibre, I guess) is a single binary that can serve your Calibre
+Library as an OPDS feed. It comes with basic authentication and TLS support.
 
 Go check it out on Github: [ORCA](https://github.com/kolja/orca)
