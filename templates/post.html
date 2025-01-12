@@ -1,11 +1,13 @@
 {% extends "blog.html" %}
+{% import 'macros.html' as macros %}
 
 {% block doc_content %}
-<article>
-  <h1 class="title">
-    {{ page.title }}
-  </h1>
-  <p class="subtitle"><strong>{{ page.date }}</strong></p>
-  {{ page.content | safe }}
-</article>
+  {% set placeholder_date = page.date | date(format="%B DAY %Y") %}
+  {% set day = page.date | date(format="%d") | int %}
+  {% set formatted = placeholder_date | replace(from="DAY", to=macros::ordinal(day=day)) %}
+  <article>
+    <strong class="date">{{ formatted }}</strong>
+    <h1 class="title"> {{ page.title }} </h1>
+    {{ page.content | safe }}
+  </article>
 {% endblock doc_content %}

@@ -1,0 +1,14 @@
+{% macro ordinal(day) %}
+    {% if day in [1, 21, 31] %}
+        {{ day }}st
+    {% elif day in [2, 22] %}
+        {{ day }}nd
+    {% elif day in [3, 23] %}
+        {{ day }}rd
+    {% else %}
+        {{ day }}th
+    {% endif %}
+{% endmacro %}
+
+
+

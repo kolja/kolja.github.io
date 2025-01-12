@@ -9,7 +9,6 @@
         <link rel="stylesheet" href="/site.css">
     </head>
     <body>
-        <canvas id="canvas"></canvas>
         <header>
             <img alt="Robots going into battle: They are carrying swords and come flooding out of the belley, down a ramp of a huge robot-behemoth who is holding out its arm like an order to attack. The background is in red and orange as if on fire." src="/img/robots.webp">
         </header>
@@ -17,16 +16,17 @@
             <a href="/">home</a>
             <a href="/contact">contact</a>
             <a href="/gallery">gallery</a>
-            <a href="/blog">blog</a>
+            <a href="/blog/klebewal">blog</a>
         </nav>
         <section class="section">
             {% block content %} {% endblock %}
         </section>
+
         <script type="importmap">{
             "imports": {
                 "three": "https://unpkg.com/three@0.152.2/build/three.module.min.js"
             }
         }</script>
-        <script src="main.js" type="module"></script>
+        <script src="/overlay.js"></script>
     </body>
 </html>

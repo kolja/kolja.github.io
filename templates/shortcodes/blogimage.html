@@ -1,0 +1,7 @@
+
+{% set original_image = "/blog/" ~ src %}
+{% set image = resize_image(path=original_image, height=200, op="fit_height") %}
+{% set cls = classes | join(sep=" ") %}
+
+<img src="{{ image.url }}" data-original-src="{{ original_image }}" alt="{{ alt
+  }}" class="{{ cls }}"}>

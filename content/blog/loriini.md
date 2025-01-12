@@ -3,7 +3,7 @@ title = "loriini"
 date = 2024-04-06
 +++
 
-{{ image(src="blog/loriini.jpg", alt="Loriini", width="50%") }}
+{{ blogimage(src="loriini.jpg", alt="Loriini", classes=["clickable"]) }}
 
 Loriini is a [colorful bird](https://en.wikipedia.org/wiki/Loriini) -- but as of now, it is also a cli color-picker. I just wrote it in Rust.
 
