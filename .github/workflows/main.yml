@@ -15,10 +15,10 @@ jobs:
           echo "-----"
           ls -la static/blog/
           echo "-----"
-          if [ -f "static/gallery/international.png" ]; then
-            echo "File exists: static/gallery/international.png"
+          if [ -f "/github/workspace/static/international.png" ]; then
+            echo "File exists: /github/workspace/static/international.png"
           else
-            echo "File does not exist: static/gallery/international.png"
+            echo "File does not exist: /github/workspace/static/international.png"
           fi
         continue-on-error: true
 

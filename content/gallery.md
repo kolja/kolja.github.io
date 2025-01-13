@@ -1,7 +1,6 @@
 +++
 title = "Gallery"
 slug = "gallery"
-template = "gallery.html"
 date = 2025-01-01
 +++
 
