@@ -9,12 +9,15 @@ jobs:
       - name: checkout
         uses: actions/checkout@v4
 
+      - name: Determine the current working directory
+        run: pwd
+
       - name: Check file exists
         run: |
-          if [ -f "/github/workspace/static/international.png" ]; then
-            echo "File exists: /github/workspace/static/international.png"
+          if [ -f "static/international.png" ]; then
+            echo "File exists: static/international.png"
           else
-            echo "File does not exist: /github/workspace/static/international.png"
+            echo "File does not exist: static/international.png"
           fi
         continue-on-error: true
 
@@ -23,7 +26,7 @@ jobs:
         env:
           # Target branch
           PAGES_BRANCH: gh-pages
-          BUILD_DIR: /github/workspace
+          # BUILD_DIR: /github/workspace
           # Use automatic token
           TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
