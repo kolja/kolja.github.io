@@ -8,6 +8,20 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@v4
+
+      - name: Check file exists
+        run: |
+          ls -la static/gallery/
+          echo "-----"
+          ls -la static/blog/
+          echo "-----"
+          if [ -f "static/gallery/international.png" ]; then
+            echo "File exists: static/gallery/international.png"
+          else
+            echo "File does not exist: static/gallery/international.png"
+          fi
+        continue-on-error: true
+
       - name: build_and_deploy
         uses: shalzz/zola-deploy-action@v0.19.2
         env:
