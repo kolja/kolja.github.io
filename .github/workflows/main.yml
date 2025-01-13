@@ -11,10 +11,6 @@ jobs:
 
       - name: Check file exists
         run: |
-          ls -la static/gallery/
-          echo "-----"
-          ls -la static/blog/
-          echo "-----"
           if [ -f "/github/workspace/static/international.png" ]; then
             echo "File exists: /github/workspace/static/international.png"
           else
