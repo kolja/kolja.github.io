@@ -5,8 +5,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
   function showOverlay(event) {
     const originalSrc = event.target.getAttribute('data-original-src');
-    console.log(overlay);
-    console.log(originalSrc);
     if (originalSrc) {
       overlayImage.src = originalSrc;
       overlay.style.display = 'flex';
