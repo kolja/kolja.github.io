@@ -11,9 +11,14 @@ jobs:
 
       - name: make static directory available on /github/workspace
         run: ln -s $(pwd)/static /github/workspace
+        continue-on-error: true
 
-      - name: Check file exists
+      - name: Check files exist
         run: |
+          echo "-- ls github.workspace: --"
+          ls -la /github/workspace
+          echo "-- ls static: --"
+          ls -la static
           if [ -f "static/international.png" ]; then
             echo "File exists: static/international.png"
           else
