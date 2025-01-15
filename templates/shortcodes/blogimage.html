@@ -1,6 +1,5 @@
-
-{% set image = resize_image(path=src, height=200, op="fit_height") %}
-{% set cls = classes | join(sep=" ") %}
+{% set image = resize_image(path=src, height=200, op="fit_height") -%}
+{% set cls = classes | join(sep=" ") -%}
 
 <img src="{{ image.url }}"
      data-original-src="/{{ src }}"
