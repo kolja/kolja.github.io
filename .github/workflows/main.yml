@@ -10,20 +10,15 @@ jobs:
         uses: actions/checkout@v4
 
       - name: make static directory available on /github/workspace
-        run: ln -s $(pwd)/static /github/workspace
+        run: |
+          echo "realpath static"
+          realpath static
         continue-on-error: true
 
       - name: Check files exist
         run: |
-          echo "-- ls github.workspace: --"
-          ls -la /github/workspace
           echo "-- ls static: --"
           ls -la static
-          if [ -f "static/international.png" ]; then
-            echo "File exists: static/international.png"
-          else
-            echo "File does not exist: static/international.png"
-          fi
         continue-on-error: true
 
       - name: build_and_deploy
