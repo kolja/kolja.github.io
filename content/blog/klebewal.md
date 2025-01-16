@@ -6,7 +6,7 @@ date = 2025-01-10
 In autumn last year, I bought a 3d printer: the [Elegoo Saturn 4 Ultra](https://us.elegoo.com/products/saturn-4-ultra-12k-10inch-monochrome-lcd-resin-3d-printer), so I'm printing all kinds of things now.
 When my sister secretly confided that she wanted a tape dispenser for Christmas, I decided that I'd make a custom one for her.
 
-{{ blogimage(src="Fusion_Klebewal.jpg", alt="Screenshot of the model in Fusion 360", classes=["clickable"]) }}
+{{ blogimage(src="Fusion_KlebeWal.jpg", alt="Screenshot of the model in Fusion 360", classes=["clickable"]) }}
 {{ blogimage(src="blueprint.png", alt="technical blueprint with front and side views and a isometric projection of an orca-whale-shaped sticky-tape dispenser", classes=["clickable"]) }}
 
 For the design, I noticed that tape dispensers somewhat look like whales and decided to make that explicit in my design. I spent an entire afternoon designing it in Fusion 360 and sent it to the printer.
