@@ -8,6 +8,8 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@v4
+        with:
+          lfs: true
 
       - name: make static directory available on /github/workspace
         run: |
