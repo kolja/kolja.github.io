@@ -1,8 +1,0 @@
-{% set original_src = page.path ~ src -%}
-{% set scaled = resize_image(path=original_src, height=200, op="fit_height") -%}
-{% set cls = classes | join(sep=" ") %}
-
-<img src="{{ scaled.url }}"
-     data-original-src="{{ original_src }}"
-     alt="{{ alt }}"
-     class="{{ cls }}">

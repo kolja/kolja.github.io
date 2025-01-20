@@ -1,0 +1,13 @@
+{% set original_src_name = page.path ~ name -%}
+{% set placeholder_img = resize_image(path=(original_src_name ~ "." ~ extension), height=200, op="fit_height") -%}
+{% set cls = classes | join(sep=" ") %}
+
+<img src="{{ placeholder_img.url }}"
+     data-name="{{ original_src_name }}"
+     data-extension="{{ extension }}"
+     data-count="{{ 1 }}"
+     data-index="{{ 1 }}"
+     alt="{{ preview_alt }}"
+     data-alt="{{ [ preview_alt ] | json_encode }}"
+     class="{{ cls }}">
+

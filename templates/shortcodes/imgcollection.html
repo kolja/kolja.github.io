@@ -1,0 +1,16 @@
+{% set original_src_name = page.path ~ name -%}
+{% if preview | length == 1 %}
+  {% set preview = "0" ~ preview %}
+{% endif %}
+{% set placeholder_img = resize_image(path=(original_src_name ~ preview ~ "." ~ extension), height=200, op="fit_height") -%}
+{% set cls = classes | join(sep=" ") %}
+
+<img src="{{ placeholder_img.url }}"
+     data-name="{{ original_src_name }}"
+     data-extension="{{ extension }}"
+     data-count="{{ count }}"
+     data-index="{{ first }}"
+     alt="{{ preview_alt }}"
+     data-alt="{{ alt | json_encode }}"
+     class="{{ cls }}">
+
