@@ -20,7 +20,7 @@ When my sister secretly confided that she wanted a tape dispenser for Christmas,
 For the design, I noticed that tape dispensers somewhat look like whales and decided to make that explicit in my design. I spent an entire afternoon designing it in Fusion 360 and sent it to the printer.
 These days I am using "Siraya Tech Build" resin for everyting, because I bought two liters of it.
 
-{{ img(name="3d_print_success", extension = "jpg", preview_alt="Here you see me with the freshly printed 'Klebewal', wearing scary-looking protective gear. I am giving a 'thumbs up' (the thumb looks weird, but this is no AI generated, I assure you). The objects on the buildplate are still wet and riddled with support structures.", classes=["clickable"]) }}
+{{ img(name="3d_print_success", extension="jpg", square=false, preview_alt="Here you see me with the freshly printed 'Klebewal', wearing scary-looking protective gear. I am giving a 'thumbs up' (the thumb looks weird, but this is no AI generated, I assure you). The objects on the buildplate are still wet and riddled with support structures.", classes=["clickable"]) }}
 
 Only after printing it, I noticed a couple of flaws in the design, most
 importantly: The tape roll was attached to ball bearings and friction was so

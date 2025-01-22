@@ -3,7 +3,7 @@ title = "ORCA"
 date = 2024-12-28
 +++
 
-{{ img(name="orca.logo", extension="png", preview_alt="an orca whale reading a red book", classes=["clickable", "floatleft"]) }}
+{{ img(name="orca.logo", extension="png", square=true, preview_alt="an orca whale reading a red book", classes=["clickable", "floatleft"]) }}
 
 As I am constantly fighting for a more minimal lifestyle and less clutter, I decided to move my entire bookshelf to the "cloud" (the Synology NAS in my livingroom).\
 Now I am using [Calibre](https://calibre-ebook.com/) to keep track of all the books I own.

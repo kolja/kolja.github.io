@@ -1,5 +1,9 @@
 {% set original_src_name = page.path ~ name -%}
-{% set placeholder_img = resize_image(path=(original_src_name ~ "." ~ extension), height=200, op="fit_height") -%}
+{% if square -%}
+  {% set placeholder_img = resize_image(path=(original_src_name ~ "." ~ extension), width=200, height=200) -%}
+{% else -%}
+  {% set placeholder_img = resize_image(path=(original_src_name ~ "." ~ extension), height=200, op="fit_height") -%}
+{% endif -%}
 {% set cls = classes | join(sep=" ") %}
 
 <img src="{{ placeholder_img.url }}"
