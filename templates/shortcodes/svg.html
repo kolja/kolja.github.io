@@ -1,0 +1,12 @@
+{% set original_name = name | trim_end_matches(pat=".svg") -%}
+{% set cls = classes | join(sep=" ") %}
+
+<img src="{{ page.path ~ name }}"
+     data-name="{{ page.path ~ original_name }}"
+     data-extension="svg"
+     data-count="{{ 1 }}"
+     data-index="{{ 1 }}"
+     alt="{{ preview_alt }}"
+     data-alt="{{ [ preview_alt ] | json_encode }}"
+     class="{{ cls }}">
+

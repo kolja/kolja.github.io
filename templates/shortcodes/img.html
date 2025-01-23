@@ -1,13 +1,14 @@
-{% set original_src_name = page.path ~ name -%}
+{% set extension = name | split(pat='.') | last -%}
+{% set original_name = name | trim_end_matches(pat="." ~ extension) -%}
 {% if square -%}
-  {% set placeholder_img = resize_image(path=(original_src_name ~ "." ~ extension), width=200, height=200) -%}
+  {% set placeholder_img = resize_image(path=page.path ~ name, width=200, height=200) -%}
 {% else -%}
-  {% set placeholder_img = resize_image(path=(original_src_name ~ "." ~ extension), height=200, op="fit_height") -%}
+  {% set placeholder_img = resize_image(path=page.path ~ name, height=200, op="fit_height") -%}
 {% endif -%}
 {% set cls = classes | join(sep=" ") %}
 
 <img src="{{ placeholder_img.url }}"
-     data-name="{{ original_src_name }}"
+     data-name="{{ page.path ~ original_name }}"
      data-extension="{{ extension }}"
      data-count="{{ 1 }}"
      data-index="{{ 1 }}"
