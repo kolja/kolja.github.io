@@ -1,5 +1,5 @@
 +++
-title = "IT"
+title = "it"
 date = 2025-01-18
 +++
 

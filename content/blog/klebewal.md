@@ -11,6 +11,7 @@ When my sister secretly confided that she wanted a tape dispenser for Christmas,
         alt=["Screenshot of the model in Fusion 360",
              "technical blueprint with front and side views and a isometric projection of an orca-whale-shaped sticky-tape dispenser"],
         classes=["clickable"]) }}
+
 {{ imgcollection(name="Fusion_KlebeWal", extension = "jpg", count = "2", first = "2", preview = "2",
         preview_alt = "Blueprint with front and side views",
         alt=["Screenshot of the model in Fusion 360",
