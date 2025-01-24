@@ -13,7 +13,7 @@ date = 2025-01-18
     ])
 }}
 
-{{ imgcollection(name="leo.jpg", count = "2", first = "1", preview = "1",
+{{ imgcollection(name="leo.jpg", count="2", first="1", preview="1",
     classes = ["clickable"],
     preview_alt = "A comic about Leo the turtle who undertakes a trip to the Zalando warehouse",
     alt = ["Leo is a turtle that escapes from his terrarium and jumps into the box which is returned to the Zalando warehouse.",
@@ -25,15 +25,14 @@ date = 2025-01-18
 
 {{ img(name="process.jpg", square=true, preview_alt="how many engineers do you need to change a lightbulb? several can be seen here: One is actually changing the light bulb, the other are holding the tables and chairs that were stacked together to reach it. One enineer is on his way with a ladder.", classes=["clickable"]) }}
 
-{{ imgcollection(name="graphic.jpg", count = "5", first = "1", preview = "0",
+{{ imgcollection(name="graphic.jpg", count="5", first="1", preview="0",
     classes = ["clickable"],
     preview_alt = "ink drawings colorized in shades of gray",
     alt = ["kid, in his room, shouting: Mom, wanna see a mess? mom, in vaccuuming the living room: What CMS?",
            "Customer, at the register in the supermarket, buying only shoes (all placed on the conveyor belt)",
            "A person is about to order a shoe from the menue in a restaurant. In the background a lady is being served a shoe and she can not contain her excitement.",
-           "A person is working on a conveyor belt, evidently is task is to smash in eggs with a hammer. His workplace is labeled 'QA'. His bald head looks similar to the eggs he is smashing, and behind him, there is a person, equally equipped with a hammer. His workspace is labeled 'RQM'.",,
-           "Cylindical Silos that are connected by pipes (they represent Databases). There is an Elephant standing on top of one of the silos. Pleople are walking around among the silos.",
-    ])
+           "A person is working on a conveyor belt, evidently is task is to smash in eggs with a hammer. His workplace is labeled 'QA'. His bald head looks similar to the eggs he is smashing, and behind him, there is a person, equally equipped with a hammer. His workspace is labeled 'RQM'.",
+           "Cylindical silos that are connected by pipes (they represent Databases). There is an Elephant standing on top of one of the silos. Pleople are walking around among the silos."])
 }}
 
 {{ img(name="international.jpg", square=true, preview_alt = "people saying 'hello' in many languages", classes=["clickable"]) }}
