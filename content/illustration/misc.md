@@ -25,6 +25,16 @@ date = 2025-01-18
 
 {{ img(name="process.jpg", square=true, preview_alt="how many engineers do you need to change a lightbulb? several can be seen here: One is actually changing the light bulb, the other are holding the tables and chairs that were stacked together to reach it. One enineer is on his way with a ladder.", classes=["clickable"]) }}
 
+
+{{ imgcollection(name="postgres.jpg", count="4", first="1", preview="0",
+    classes = ["clickable"],
+    preview_alt = "ink drawings colorized in shades of gray",
+    alt = ["A little elephant on a cyllindrical pedestal, wearing a saylors hat and holding a cyllindrical balloon",
+"Visualisation of 'replication with postgres'. A blue elephant dissolving into a swirl of cubes and rematerialising in a different location with a puzzled expression.",
+"A blue elephant in saylor gear sitting on a bollard, smoking a pipe and leaning on a (red and white) lifebuoy",
+"A couple of elephant herders are trying to make a headstrong, blue elephant move. One is trying to lure him with a banana, one is pushing from behind, one is pulling his trunk and one is pulling him with a rope." ])
+}}
+
 {{ imgcollection(name="graphic.jpg", count="5", first="1", preview="0",
     classes = ["clickable"],
     preview_alt = "ink drawings colorized in shades of gray",
