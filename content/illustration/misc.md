@@ -29,7 +29,7 @@ date = 2025-01-18
     classes = ["clickable"],
     preview_alt = "ink drawings colorized in shades of gray",
     alt = ["kid, in his room, shouting: Mom, wanna see a mess? mom, in vaccuuming the living room: What CMS?",
-           "Customer, at the register in the supermarket, buying only shoes (all placed on the conveyor belt)",
+           "Customer, at the register in the supermarket, buying mostly shoes (all placed on the conveyor belt)",
            "A person is about to order a shoe from the menue in a restaurant. In the background a lady is being served a shoe and she can not contain her excitement.",
            "A person is working on a conveyor belt, evidently is task is to smash in eggs with a hammer. His workplace is labeled 'QA'. His bald head looks similar to the eggs he is smashing, and behind him, there is a person, equally equipped with a hammer. His workspace is labeled 'RQM'.",
            "Cylindical silos that are connected by pipes (they represent Databases). There is an Elephant standing on top of one of the silos. Pleople are walking around among the silos."])

@@ -19,3 +19,4 @@ date = 2025-01-18
 
 {{ img(name="orca.logo.png", square=true, preview_alt="ORCA logo: a stylized orca whale reading a book in a circle", classes=["clickable"]) }}
 
+{{ svg(name="zappr.logo.svg", square=true, preview_alt="An alien cephalopods with many eyes holding a gun that emits an electric blast. Above it, the word 'zappr' is being electrified. This illustration is all pink and yellow", classes=["clickable"]) }}
