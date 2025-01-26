@@ -14,7 +14,7 @@ Phone: +49 (0) 175 59 59 161
 or write an [email](javascript:window.location.href=atob('bWFpbHRvOmtvbGphQGFwZmVsLmRl'))
 
 # CV
-Here are pdfs with my CV in [English](../cv_short_en.pdf) and [German](../cv_short_de.pdf)
+Here are pdfs with my CV in [English](../cv_en.pdf) and [German](../cv_de.pdf)
 
 # email me
 {{ mailform() }}
