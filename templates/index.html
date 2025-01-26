@@ -2,11 +2,5 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <p>I'm Kolja, a software engineer (and illustrator) with experience in JavaScript, Clojure and Rust.</p>
-    <p>Shortly, I'll add some of my recent projects and references to this website (which is based on <a href="https://www.getzola.org" target="_blank">Zola</a>, btw), so stay tuned.
-    </p>
-    <p>
-        Also: I am currently available for new projects: Now may be the best time for you to have me help
-        you realize your vision. If you require software development or illustration work
-        (or both), please feel free to <a href="javascript:window.location.href=atob('bWFpbHRvOmtvbGphQGFwZmVsLmRl')">reach out</a>.
+  {{ section.content | safe }}
 {% endblock %}
