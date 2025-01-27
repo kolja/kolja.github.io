@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>keinegna.de - website for Kolja</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="KeineGna.de: Web development and Illustration by Kolja Wilcke, Berlin. Contact information, and social media links.">
+        <meta name="author" content="Kolja Wilcke">
+        <link rel="stylesheet" href="/site.css">
+    </head>
+    <body>
+        <header>
+            <img alt="Robots going into battle: They are carrying swords and come flooding out of the belley, down a ramp of a huge robot-behemoth who is holding out its arm like an order to attack. The background is in red and orange as if on fire." src="/img/robots.webp">
+        </header>
+        <nav>
+            <a href="/">home</a>
+            <a href="/contact">contact</a>
+            <a href="/illustration/it">illustration</a>
+            <a href="/blog/klebewal">blog</a>
+        </nav>
+        <section class="section">
+            
+  <p>I'm Kolja, a software engineer and illustrator with experience in JavaScript, Clojure and Rust.</p>
+<p>This is my website. It is generated with <a rel="noopener" target="_blank" href="https://www.getzola.org">Zola</a> and hosted on <a rel="noopener" target="_blank" href="https://github.com/kolja">Github</a>. I would like to encourage you to have a look at my <a href="/illustration/it">illustrations</a>; Most of them are related to programming and tech in general. <br />
+I am documenting my thoughts and the projects that I'm working on over in the <a href="/blog/klebewal">blog</a> section: My most recent project is <a href="/blog/orca">ORCA</a>, a OPDS server for Calibre, written in Rust.</p>
+<p>Be sure to get in touch to give feedback or just to say hi <br />
+(it's easy! Just head over to this <a href="/contact">contact form</a> and click 'send').</p>
+<p><strong>Also</strong>: I am currently available for new projects! Now may be the best time for you to have me help you realize your vision. If you require software development or illustration work (or both), please feel free to reach out.</p>
+
+
+        </section>
+
+        <div id="overlay"> <!-- use js to generate, avoid id -->
+          <img id="overlay-image" src="" alt="Overlay Image">
+          <a id="prev-image" href="#">&lt;</a>
+          <a id="next-image" href="#">&gt;</a>
+        </div>
+        <script type="importmap">{
+            "imports": {
+                "three": "https://unpkg.com/three@0.152.2/build/three.module.min.js"
+            }
+        }</script>
+        <script src="/overlay.js"></script>
+    </body>
+</html>
