@@ -3,8 +3,6 @@ title = "was bedeutet \"Idempotent\"?"
 date = 2025-06-15
 +++
 
-# Was bedeutet "Idempotent"?
-
 Idempotent ist eine Aktion die man mehrmals ausführen kann ohne dass sich das Ergebnis ändert.
 
 Wir haben hier in Berlin zum Beispiel eine idempotente Fußgängerampel:
