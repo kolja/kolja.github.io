@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>keinegna.de - website for Kolja</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="KeineGna.de: Web development and Illustration by Kolja Wilcke, Berlin. Contact information, and social media links.">
+        <meta name="author" content="Kolja Wilcke">
+        <link rel="stylesheet" href="/site.css">
+    </head>
+    <body>
+        <header>
+            <img alt="Robots going into battle: They are carrying swords and come flooding out of the belley, down a ramp of a huge robot-behemoth who is holding out its arm like an order to attack. The background is in red and orange as if on fire." src="/img/robots.webp">
+        </header>
+        <nav>
+            <a href="/">home</a>
+            <a href="/contact">contact</a>
+            <a href="/illustration/it">illustration</a>
+            <a href="/blog/klebewal">blog</a>
+        </nav>
+        <section class="section">
+            
+
+<div class="container">
+    <aside class="sidebar">
+        <ul>
+            
+                <li>
+                  <a href="https:&#x2F;&#x2F;kolja.github.io&#x2F;blog&#x2F;idempotency&#x2F;"
+                     class="">
+                    was bedeutet &quot;Idempotent&quot;?
+                  </a>
+                </li>
+            
+                <li>
+                  <a href="https:&#x2F;&#x2F;kolja.github.io&#x2F;blog&#x2F;politics&#x2F;"
+                     class="">
+                    Politics
+                  </a>
+                </li>
+            
+                <li>
+                  <a href="https:&#x2F;&#x2F;kolja.github.io&#x2F;blog&#x2F;feinstaub&#x2F;"
+                     class="">
+                    Feinstaub
+                  </a>
+                </li>
+            
+                <li>
+                  <a href="https:&#x2F;&#x2F;kolja.github.io&#x2F;blog&#x2F;klebewal&#x2F;"
+                     class="">
+                    Klebewal
+                  </a>
+                </li>
+            
+                <li>
+                  <a href="https:&#x2F;&#x2F;kolja.github.io&#x2F;blog&#x2F;orca&#x2F;"
+                     class="active">
+                    ORCA
+                  </a>
+                </li>
+            
+                <li>
+                  <a href="https:&#x2F;&#x2F;kolja.github.io&#x2F;blog&#x2F;loriini&#x2F;"
+                     class="">
+                    loriini
+                  </a>
+                </li>
+            
+        </ul>
+    </aside>
+    <div class="content">
+      
+  
+  
+  
+  <article>
+    <strong class="date">December 
+    
+        28th
+    
+ 2024</strong>
+    <h1 class="title"> ORCA </h1>
+    
+
+<img src="https:&#x2F;&#x2F;kolja.github.io&#x2F;processed_images&#x2F;orca.logo.6c6d392e0722ce9a.png"
+     data-name="/blog/orca/orca.logo"
+     data-extension="png"
+     data-count="1"
+     data-index="1"
+     alt="an orca whale reading a red book"
+     data-alt="[&quot;an orca whale reading a red book&quot;]"
+     class="clickable floatleft">
+
+<p>As I am constantly fighting for a more minimal lifestyle and less clutter, I decided to move my entire bookshelf to the "cloud" (the Synology NAS in my livingroom).<br />
+Now I am using <a rel="noopener" target="_blank" href="https://calibre-ebook.com/">Calibre</a> to keep track of all the books I own.</p>
+<p>Whenever I want to read a book, I'll open <a rel="noopener" target="_blank" href="https://www.yomu-reader.com/">Yomu</a> on my iPad, which can add books from an OPDS feed, so all the books I ever read are just a tap and a swipe away.</p>
+<p>But how do you serve your Calibre library as OPDS feed, such that you can access it anywhere?
+I felt that there was no simple, straight-forward solution out there, so I decided to write my own.</p>
+<p>ORCA (OPDS Rust CAlibre, I guess) is a single binary that can serve your Calibre library as an OPDS feed. It comes with basic authentication and TLS support.</p>
+<p>This means, it's easy to run it in a docker container or to install locally (e.g with brew). Apart from a simple config file, it has no dependencies, so you don't need to mess with reverse proxies, LDAP or databases.</p>
+<p>Go check it out on Github: <a rel="noopener" target="_blank" href="https://github.com/kolja/orca">ORCA</a><br />
+(and while you're at it, consider to give it a star!)</p>
+
+  </article>
+
+    </div>
+</div>
+
+        </section>
+
+        <div id="overlay"> <!-- use js to generate, avoid id -->
+          <img id="overlay-image" src="" alt="Overlay Image">
+          <a id="prev-image" href="#">&lt;</a>
+          <a id="next-image" href="#">&gt;</a>
+        </div>
+        <script type="importmap">{
+            "imports": {
+                "three": "https://unpkg.com/three@0.152.2/build/three.module.min.js"
+            }
+        }</script>
+        <script src="/overlay.js"></script>
+    </body>
+</html>
