@@ -52,6 +52,8 @@ date = 2025-01-18
 "me: 'I apologize for the confusion. You are correct that a position as a senior engineer would be a better fit for me.'"])
 }}
 
+{{ img(name="elm_architecture.jpg", square=true, preview_alt = "A shadow theatre: The performer behind the scenes is manipulating the model of a monster and some puppets. A searchlight projects the shadow onto the screen. Three kids are watching with excitement: they are shouting 'turn around!', 'run away!'. They are labeled 'messages'. Other labels are 'model' and 'view'.", classes=["clickable"]) }}
+
 {{ img(name="bequeath.jpg", square=true, preview_alt = "grandpa on his death bed: 'I wish to bequeath my extensive fortune... to Linda, while Joe inherits the company. I shall leave the villa to Elizabeth ... and my vimrc to Kevin.' Kevin (doing a 'strike' gesture): 'Yes!'", classes=["clickable"]) }}
 
 {{ img(name="deadline.jpg", square=true, preview_alt="someone is riding a steamroller bending over backwards such that he is steamrolling over his own body. While he is being run over, he is fervently typing on his laptop", classes=["clickable"]) }}
