@@ -17,4 +17,4 @@ or write an [email](javascript:window.location.href=atob('bWFpbHRvOmtvbGphLndpbG
 Here are pdfs with my CV in [English](../cv_en.pdf) and [German](../cv_de.pdf)
 
 # email me
-{{ mailform() }}
+{{ <mailform /> }}

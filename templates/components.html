@@ -1,0 +1,60 @@
+{# Components replacing the pre-0.23 shortcodes.
+
+   Two constraints apply that did not apply to shortcodes, because component
+   output is now spliced into the markdown *before* the CommonMark pass:
+
+   1. Each tag is emitted on a single unindented line. Continuation lines
+      indented by four spaces or more would be parsed as an indented code
+      block and escaped (getzola/zola#3224).
+   2. Content templating does not auto-escape, so every interpolated value
+      that may contain quotes goes through `escape_html` explicitly.
+
+   Components are also hygienic, so the page's URL path has to be passed in
+   as `path` by every call site. #}
+
+{% component img(name: string, path: string, preview_alt: string, square: bool = false, classes = ["clickable"]) %}
+{%- set extension = name | split(pat='.') | last -%}
+{%- set original_name = name | trim_end(pat="." ~ extension) -%}
+{%- if square -%}
+  {%- set placeholder_img = resize_image(path=path ~ name, width=200, height=200) -%}
+{%- else -%}
+  {%- set placeholder_img = resize_image(path=path ~ name, height=200, op="fit_height") -%}
+{%- endif -%}
+{%- set cls = classes | join(sep=" ") -%}
+<img src="{{ placeholder_img.url }}" data-name="{{ path ~ original_name }}" data-extension="{{ extension }}" data-count="1" data-index="1" alt="{{ preview_alt | escape_html }}" data-alt="{{ [ preview_alt ] | json_encode | escape_html }}" class="{{ cls }}">
+{%- endcomponent img %}
+
+{% component imgcollection(name: string, path: string, count: string, first: string, preview: string, preview_alt: string, alt = [], classes = ["clickable"]) %}
+{%- set extension = name | split(pat='.') | last -%}
+{%- set original_name = name | trim_end(pat="." ~ extension) -%}
+{%- if preview | length == 1 -%}
+  {%- set preview = "0" ~ preview -%}
+{%- endif -%}
+{%- set placeholder_img = resize_image(path=(path ~ original_name ~ preview ~ "." ~ extension), height=200, op="fit_height") -%}
+{%- set cls = classes | join(sep=" ") -%}
+<img src="{{ placeholder_img.url }}" data-name="{{ path ~ original_name }}" data-extension="{{ extension }}" data-count="{{ count }}" data-index="{{ first }}" alt="{{ preview_alt | escape_html }}" data-alt="{{ alt | json_encode | escape_html }}" class="{{ cls }}">
+{%- endcomponent imgcollection %}
+
+{% component svg(name: string, path: string, preview_alt: string, classes = ["clickable"]) %}
+{%- set original_name = name | trim_end(pat=".svg") -%}
+{%- set cls = classes | join(sep=" ") -%}
+<img src="{{ path ~ name }}" data-name="{{ path ~ original_name }}" data-extension="svg" data-count="1" data-index="1" alt="{{ preview_alt | escape_html }}" data-alt="{{ [ preview_alt ] | json_encode | escape_html }}" class="{{ cls }}">
+{%- endcomponent svg %}
+
+{% component mailform() %}
+<form
+  action="https://formspree.io/f/xkjoaeqn"
+  method="POST"
+>
+  <label>
+    Your email:
+    <input type="email" name="email">
+  </label>
+  <label>
+    Your message:
+    <textarea name="message"></textarea>
+  </label>
+  <!-- your other form fields go here -->
+  <button type="submit">Send</button>
+</form>
+{%- endcomponent mailform %}

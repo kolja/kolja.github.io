@@ -1,10 +1,10 @@
 {% extends "blog.html" %}
-{% import 'macros.html' as macros %}
 
 {% block doc_content %}
   {% set placeholder_date = page.date | date(format="%B DAY %Y") %}
   {% set day = page.date | date(format="%d") | int %}
-  {% set formatted = placeholder_date | replace(from="DAY", to=macros::ordinal(day=day)) %}
+  {% set suffix = "st" if day in [1, 21, 31] else ("nd" if day in [2, 22] else ("rd" if day in [3, 23] else "th")) %}
+  {% set formatted = placeholder_date | replace(from="DAY", to=day ~ suffix) %}
   <article>
     <strong class="date">{{ formatted }}</strong>
     <h1 class="title"> {{ page.title }} </h1>
