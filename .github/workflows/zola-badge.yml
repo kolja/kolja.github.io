@@ -1,0 +1,80 @@
+# Compares the Zola version pinned in main.yml against the newest release of
+# shalzz/zola-deploy-action (whose tags mirror Zola's own version numbers) and
+# publishes the verdict as a shields.io endpoint badge on the `badges` branch.
+#
+# The comparison logic and this workflow were written with Claude Code (Opus 5).
+name: Zola version badge
+
+on:
+  schedule:
+    - cron: '17 6 * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/main.yml']
+
+permissions:
+  contents: write
+
+concurrency:
+  group: zola-badge
+  cancel-in-progress: false
+
+jobs:
+  badge:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4
+
+      - name: compare pinned version against latest
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+
+          pin=$(grep -oE 'shalzz/zola-deploy-action@v[0-9.]+' .github/workflows/main.yml \
+                | head -1 | sed 's/.*@v//')
+          latest=$(curl -fsSL -H "Authorization: Bearer $GH_TOKEN" \
+                   'https://api.github.com/repos/shalzz/zola-deploy-action/tags?per_page=100' \
+                   | grep -oE '"name": *"v[0-9.]+"' | sed 's/.*"v//;s/"$//' \
+                   | sort -V | tail -1)
+
+          # Fail loudly rather than publishing a badge built from empty strings.
+          [ -n "$pin" ] && [ -n "$latest" ]
+          echo "pinned=$pin latest=$latest"
+
+          if [ "$pin" = "$latest" ]; then
+            message="up to date (v$pin)"; color="brightgreen"
+          elif [ "$(printf '%s\n%s\n' "$pin" "$latest" | sort -V | tail -1)" = "$pin" ]; then
+            message="v$pin (ahead of v$latest)"; color="blue"
+          else
+            message="v$pin → v$latest available"; color="orange"
+          fi
+
+          printf '{"schemaVersion":1,"label":"zola","message":"%s","color":"%s"}\n' \
+            "$message" "$color" > "$RUNNER_TEMP/zola.json"
+          cat "$RUNNER_TEMP/zola.json"
+
+      - name: publish to badges branch
+        run: |
+          set -euo pipefail
+
+          published=$(curl -fsSL \
+            "https://raw.githubusercontent.com/$GITHUB_REPOSITORY/badges/zola.json" || true)
+          if [ "$published" = "$(cat "$RUNNER_TEMP/zola.json")" ]; then
+            echo "badge unchanged, nothing to publish"
+            exit 0
+          fi
+
+          git config user.name  'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+
+          # The badges branch holds exactly one file and one commit; it carries no
+          # history worth keeping, so republish it as a fresh orphan each time.
+          git checkout --orphan badges-publish
+          git rm -rqf . --ignore-unmatch
+          cp "$RUNNER_TEMP/zola.json" zola.json
+          git add zola.json
+          git commit -m "zola badge: $(sed -n 's/.*"message":"\([^"]*\)".*/\1/p' zola.json)"
+          git push --force origin badges-publish:badges

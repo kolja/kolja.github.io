@@ -1,0 +1,8 @@
+version: 2
+updates:
+  # Opens a PR when shalzz/zola-deploy-action (i.e. the Zola version used to
+  # build this site) gets a new release.
+  - package-ecosystem: github-actions
+    directory: "/"
+    schedule:
+      interval: weekly
