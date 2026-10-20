@@ -1,7 +1,7 @@
 +++
 title = "contact"
 slug = "contact"
-date = 2026-20-10
+date = 2026-10-20
 +++
 
 # contact & social media
