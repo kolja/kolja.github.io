@@ -1,7 +1,7 @@
 +++
 title = "contact"
 slug = "contact"
-date = 2025-01-01
+date = 2026-20-10
 +++
 
 # contact & social media
@@ -11,7 +11,7 @@ GitHub: [github.com/kolja](https://github.com/kolja)\
 Stackoverflow: [kolja](https://stackoverflow.com/users/731041/kolja)\
 Phone: +49 (0) 175 59 59 161
 
-or write an [email](javascript:window.location.href=atob('bWFpbHRvOmtvbGphQGFwZmVsLmRl'))
+or write an [email](javascript:window.location.href=atob('bWFpbHRvOmtvbGphLndpbGNrZUBwcm90b24ubWU='))
 
 # CV
 Here are pdfs with my CV in [English](../cv_en.pdf) and [German](../cv_de.pdf)
